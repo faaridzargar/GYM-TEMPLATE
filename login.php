@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-<title>Login</title>
-<link rel="stylesheet" href="css/style.css" />
-</head>
+  <head><link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+    rel="stylesheet">
+
+<!-- Css Styles -->
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+<link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css"></head>
 <body>
+
+	<div class="form">
+<h1>Log In</h1>
+<hr>
+<form action="" method="post" name="login">
+<label for="Name"><b>Name</b></label>
+<input type="text" name="username" placeholder="Username" required />
+<label for="password"><b>Password</b></label>
+<input type="password" name="password" placeholder="password" required />
+
+<input name="submit" type="submit" value="Login" />
+</form>
+<p>Not registered yet? <a href='signup.html'>Register Here</a></p>
+</div>
+
 <?php
 require('db.php');
 session_start();
@@ -32,16 +53,6 @@ and password='".md5($password)."'";
 	}
     }else{
 ?>
-<div class="form">
-<h1>Log In</h1>
-<form action="" method="post" name="login">
-<input type="text" name="username" placeholder="Username" required />
-<input type="password" name="password" placeholder="Password" required />
-<br>
-<input name="submit" type="submit" value="Login" />
-</form>
-<p>Not registered yet? <a href='registration.php'>Register Here</a></p>
-</div>
 <?php } ?>
 </body>
 </html>

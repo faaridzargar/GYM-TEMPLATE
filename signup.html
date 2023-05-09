@@ -13,6 +13,7 @@
     <form action="signup.php" method="POST" >
   <div class="container">
     <h1>Sign Up</h1>
+    <br>
     <p>Please fill in this form to create an account.</p>
     <hr>
 
@@ -24,6 +25,17 @@
 
     <label for="psw-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <hr>
+
+    <label for="Name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="Name" required>
+
+    <label for="Plan"><b>Plan</b></label>
+    <select name="plan" id="plan">
+      <option value="Basic">Basic</option>
+      <option value="Standard">Standard</option>
+      <option value="Premium">Premium</option>
+    </select>
 
     <!-- <label>
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
